@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Travel Today</title>
 <style>
 
@@ -11,18 +12,26 @@ body {
     font-size: 17px;
 }
 
-.box { 
-  margin: 20px auto;
-  width: 100%;
-  max-width: 150px;
-  height: 40px; 
-  text-align: center; 
-  color: white;
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
 }
 
-.box .container-1 input{
-   width: 100%;
-   color: white;
+form.example button:hover {
+    background: #0b7dda;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
 }
  
 .content {
@@ -49,15 +58,10 @@ body {
   <source src="vr714.github.io/site.mp4" type="video/mp4">
 </video>
     
-<div class="content">
-    <div class="box"> 
-        <div class="container-1"> 
-            <input type="search" id="search" placeholder="Search..."> 
-        </div> 
-    </div>
-
-    <p>Oh the places you'll go</p>
-</div>
+<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+  <input type="text" placeholder="Search.." name="search2">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
     
 
 
