@@ -12,6 +12,66 @@ body {
 * {
     box-sizing: border-box;
 }
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+} 
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+    height: 50px;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
     
 form.example input[type=text] {
     text-align:center;
@@ -65,6 +125,25 @@ form.example::after {
 </style>
 </head>
 <body>
+
+<div class="topnav">
+  <div class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">
+      <span class="glyphicon glyphicon-menu-hamburger"></span>
+    </a>
+    <div class="dropdown-content">
+      <a href="#">Ingredient Spinner</a>
+      <a href="#">Kitchen Secrets</a>
+      <a href="#">Holidays</a>
+      <a href="#">Newsletter</a>
+    </div>
+  </div>
+  <a href="#" style="font-family: Impact;">SHIJE</a>
+  <a href="#">Desserts</a>
+  <a href="#">Healthy</a>
+  <a href="#">Easy Dinners</a>
+  <a href="#" i style="font-size:24px; float: right" class="fa">&#xf002;</a>
+</div>
 
 <video autoplay muted loop id="site" width=100% height=50%>
   <source src="vr714.github.io/site.mp4" type="video/mp4">
