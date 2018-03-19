@@ -6,10 +6,49 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <title>Travel Today</title>
 <style>
+
 * {
     box-sizing: border-box;
 }
+.container {
+  position: relative;
+  width: 50%;
+}
 
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  font-family: Arial;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
 .column {
     float: left;
     width: 33.33%;
@@ -28,51 +67,107 @@
 
 <div class="row">
   <div class="column">
-    <img src="albania.jpg" style="width:100%">
+      <div class="container">
+        <img src="albania.jpg" style="width:100%" class="image">
+            <div class="overlay">
+                <div class="text">ALBANIA</div>
+            </div>
+      </div>
   </div>
   <div class="column">
-    <img src="brazil.jpg" style="width:100%">
+      <div class="container">
+        <img src="brazil.jpg" style="width:100%" class="image">
+            <div class="overlay">
+                <div class="text">BRAZIL</div>
+            </div>
+      </div>
   </div>
   <div class="column">
-    <img src="dominican.jpg" style="width:100%">
+      <div class="container">
+        <img src="dominican.jpg" style="width:100%" class="image">
+            <div class="overlay">
+                <div class="text">DOMINICAN REPUBLIC</div>
+            </div>
+      </div>
   </div>
-</div>
 
 <div class="row">
   <div class="column">
-    <img src="france.jpg" style="width:100%">
+      <div class="container">
+        <img src="france.jpg" style="width:100%" class="image">
+            <div class="overlay">
+                <div class="text">FRANCE</div>
+            </div>
+      </div>
   </div>
   <div class="column">
-    <img src="india.jpg" style="width:100%">
+      <div class="container">
+        <img src="india.jpg" style="width:100%" class="image">
+            <div class="overlay">
+                <div class="text">INDIA</div>
+            </div>
+      </div>
   </div>
   <div class="column">
-    <img src="jamaica.jpg" style="width:100%">
+      <div class="container">
+        <img src="jamaica.jpg" style="width:100%" class="image">
+            <div class="overlay">
+                <div class="text">JAMAICA</div>
+            </div>
+      </div>
   </div>
-</div>
 
 <div class="row">
   <div class="column">
-    <img src="morocco.jpg" style="width:100%">
+      <div class="container">
+        <img src="morocco.jpg" style="width:100%" class="image">
+            <div class="overlay">
+                <div class="text">MOROCCO</div>
+            </div>
+      </div>
   </div>
   <div class="column">
-    <img src="zambia.jpg" style="width:100%">
+      <div class="container">
+        <img src="zambia.jpg" style="width:100%" class="image">
+            <div class="overlay">
+                <div class="text">ZAMBIA</div>
+            </div>
+      </div>
   </div>
   <div class="column">
-    <img src="img_mountains.jpg" style="width:100%">
+      <div class="container">
+        <img src="albania.jpg" style="width:100%" class="image">
+            <div class="overlay">
+                <div class="text">Albania</div>
+            </div>
+      </div>
   </div>
-</div>
 
 <div class="row">
   <div class="column">
-    <img src="img_fjords.jpg" alt="Fjords" style="width:100%">
+      <div class="container">
+        <img src="albania.jpg" style="width:100%" class="image">
+            <div class="overlay">
+                <div class="text">Albania</div>
+            </div>
+      </div>
   </div>
   <div class="column">
-    <img src="img_forest.jpg" alt="Forest" style="width:100%">
+      <div class="container">
+        <img src="albania.jpg" style="width:100%" class="image">
+            <div class="overlay">
+                <div class="text">Albania</div>
+            </div>
+      </div>
   </div>
   <div class="column">
-    <img src="img_mountains.jpg" alt="Mountains" style="width:100%">
+      <div class="container">
+        <img src="albania.jpg" style="width:100%" class="image">
+            <div class="overlay">
+                <div class="text">Albania</div>
+            </div>
+      </div>
   </div>
-</div>
 
 </body>
 </html>
