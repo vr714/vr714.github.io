@@ -24,43 +24,14 @@ body, html {
 	font-family:  Arial, sans-serif;
 }
 
-/*---------------------------------------------*/
-a {
-	font-family: Arial;
-	font-size: 14px;
-	line-height: 1.7;
-	color: white;
-	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-}
-
-a:focus {
-	outline: none !important;
-}
-
-a:hover {
-	text-decoration: none;
-	color: white;
-}
-
 p {
-	font-family: Poppins-Regular;
+	font-family: Arial;
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
 	margin: 0px;
 }
 
-ul, li {
-	margin: 0px;
-	list-style-type: none;
-}
-
-
-/*---------------------------------------------*/
 input {
 	outline: none;
 	border: none;
@@ -95,7 +66,7 @@ textarea:-moz-placeholder { color: #999999; }
 textarea::-moz-placeholder { color: #999999; }
 textarea:-ms-input-placeholder { color: #999999; }
 
-/*---------------------------------------------*/
+
 button {
 	outline: none !important;
 	border: none;
@@ -110,12 +81,6 @@ iframe {
 	border: none !important;
 }
 
-
-
-
-
-/*//////////////////////////////////////////////////////////////////
-[ Contact 2 ]*/
 .bg-contact2 {
   width: 100%;  
   background-repeat: no-repeat;
@@ -151,9 +116,6 @@ iframe {
 }
 
 
-/*------------------------------------------------------------------
-[  ]*/
-
 .contact2-form {
   width: 100%;
 }
@@ -168,11 +130,6 @@ iframe {
   padding-bottom: 90px;
 }
 
-
-
-/*------------------------------------------------------------------
-[  ]*/
-
 .wrap-input2 {
   width: 100%;
   position: relative;
@@ -184,7 +141,7 @@ iframe {
   display: block;
   width: 100%;
 
-  font-family: Poppins-Regular;
+  font-family: Arial;
   font-size: 15px;
   color: #555555;
   line-height: 1.2;
@@ -229,7 +186,7 @@ iframe {
   top: 0px;
   left: 0;
 
-  font-family: Poppins-Regular;
+  font-family: Arial;
   font-size: 13px;
   color: #999999;
   line-height: 1.2;
@@ -240,7 +197,6 @@ iframe {
   transition: all 0.4s;
 }
 
-/*---------------------------------------------*/
 input.input2 {
   height: 45px;
 }
@@ -277,8 +233,6 @@ textarea.input2 + .focus-input2::after {
   width: 100%;
 }
 
-/*------------------------------------------------------------------
-[ Button ]*/
 .container-contact2-form-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -331,22 +285,16 @@ textarea.input2 + .focus-input2::after {
   min-width: 244px;
   height: 50px;
 
- 
-
-  font-family: Poppins-Medium;
+  font-family: Arial;
   font-size: 16px;
   color: #fff;
   line-height: 1.2;
-  
-
 }
 
 .wrap-contact2-form-btn:hover .contact2-form-bgbtn {
   left: 0;
 }
 
-/*------------------------------------------------------------------
-[ Responsive ]*/
 
 @media (max-width: 576px) {
   .wrap-contact2 {
@@ -362,7 +310,7 @@ textarea.input2 + .focus-input2::after {
 <body>
 <div class="bg-contact2" style="background-image:vr714.github.io/mountains.jpg">
         <div class="container-contact2">
-            <div class="wrap-contact2" style="font-family: Arial">
+            <div class="wrap-contact2">
                 <form class="contact2-form validate-form">
                     <span class="contact2-form-title">
                         Contact Us
@@ -370,7 +318,7 @@ textarea.input2 + .focus-input2::after {
 
                     <div class="wrap-input2 validate-input" data-validate="Name is required">
                         <input class="input2" type="text" name="name">
-                        <span class="focus-input2" data-placeholder="NAME"></span>
+                        <span class="focus-input2" data-placeholder="AME"></span>
                     </div>
 
                     <div class="wrap-input2 validate-input" data-validate="Valid email is required: ex@abc.xyz">
