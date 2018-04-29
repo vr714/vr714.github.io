@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Travel Today</title>
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+    
+.content {
+    position: fixed;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+    padding: 20px;
+}
+.button {
+    width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+.button:hover {
+    background: #ddd;
+    color: black;
+}
+    
+.topnav {
+    overflow: hidden;
+    background: black;
+    height: 50px;
+}
+.topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+ 
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+    
+</style>
+</head>
+<body>
 
+<div class="topnav">
+    <a href="https://vr714.github.io" style="font-family: Impact;">Travel Today</a>
+    <a href="vr714.github.io/contact.html">Contact Us</a>
+    <a href="vr714.github.io/countries.html">Countries</a>
+</div>
+    
+<div class="content">
+  <h1>Oh the Places You'll Go</h1>
+  <p>You'll be surprised at where you can go and for how little. Select a country and take a look at its average price chart. Don't wait; your adventure is waiting.</p>
+  <button class="button">Explore</button>
+</div>
+
+<video autoplay muted loop id="site" width=100% height=50%>
+  <source src="vr714.github.io/site.mp4" type="video/mp4">
+</video>
+    
+
+</body>
+</html>
