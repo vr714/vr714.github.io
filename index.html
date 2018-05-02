@@ -185,17 +185,31 @@ function myMap() {
   var mapOptions = {center: myCenter, zoom: 2};
   var map = new google.maps.Map(mapCanvas, mapOptions);
 
-var image = 'https://www.google.com/search?q=map+icons&rlz=1C5CHFA_enUS781US781&source=lnms&tbm=isch&sa=X&ved=0ahUKEwitxsb-mujaAhUJd98KHZ3MC_kQ_AUICigB&biw=1280&bih=703#imgrc=FsqDcg2ZK-CywM:
+var image = 'map.png';
 var marker = new google.maps.Marker({
-    position: {lat: -33.890, lng: 151.274},
+    position: {lat: 51.5074, lng: 0.1278},
     title:"London, England",
     icon: image
 });
 marker.setMap(map);
+    
+var marker2 = new google.maps.Marker({
+    position: {lat: 48.8566, lng: 2.3522},
+    title:"Paris, France",
+    icon: image
+});
+marker2.setMap(map);
 
-  var infowindow = new google.maps.InfoWindow({
-    content: "London, England"
-  });
+var marker3 = new google.maps.Marker({
+    position: {lat: 41.0082, lng: 28.9784},
+    title:"Istanbul, Turkey",
+    icon: image
+});
+marker3.setMap(map);
+
+    
+    
+    
   infowindow.open(map,marker);
 }   
 </script>
