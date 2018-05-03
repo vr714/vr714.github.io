@@ -178,8 +178,7 @@ h4 {
     <div id="map" style="height:450px"></div>
 </div> 
 
-<script>
-    
+<script>   
 function initialize() {
     var map;
     var bounds = new google.maps.LatLngBounds();
@@ -214,7 +213,36 @@ function initialize() {
         ['Sydney, Australia',]        
     ];
     
+    var infoWindowContent = [
+        ['<div class="info_content">' + '</div>']
+    ];
     
+    var infoWindow = new google.maps.InfoWindow(), marker, i;
+    
+    for(i = 0; i < markers.length; i++ ) {
+        var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+        bounds.extend(position);
+        marker = new google.maps.Marker({
+            position: position,
+            map: map,
+            title: markers[i][0]
+    });
+    
+    google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+            infoWindow.setContent(marker[i].title);
+            infoWindow.open(map, marker);
+        }
+    })(marker, i));
+    
+    map.fitBounds(bounds);
+    }
+    
+    var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+        this.setZoom(14);
+        google.maps.event.removeListener(boundsListener);
+    });
+}    
 /*
 function myMap() {
   var myCenter = new google.maps.LatLng(31.7917, 10);
