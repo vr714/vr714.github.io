@@ -179,11 +179,18 @@ h4 {
 </div> 
 
 <script>   
+jQuery(function($) {
+    // Asynchronously Load the map API 
+    var script = document.createElement('script');
+    script.src = "//maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
+    document.body.appendChild(script);
+});
+    
 function initialize() {
     var map;
     var bounds = new google.maps.LatLngBounds();
     var mapOptions = {mapTypeId: 'roadmap'};
-    map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+    map = new google.maps.Map(document.getElementById("map"), mapOptions);
     map.setTilt(45);
     var markers = [
         ['London, England', 51.5074, -0.1278],
