@@ -179,7 +179,45 @@ h4 {
 </div> 
 
 <script>
+    
+function initialize() {
+    var map;
+    var bounds = new google.maps.LatLngBounds();
+    var mapOptions = {mapTypeId: 'roadmap'};
+    map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+    map.setTilt(45);
+    var markers = [
+        ['London, England', 51.5074, -0.1278],
+        ['Paris, France', 48.8566, 2.3522],
+        ['Amsterdam, Netherlands', 52.3702, 4.8952],
+        ['Istanbul, Turkey', 41.0082, 28.9784],
+        ['Moscow, Russia', 55.7558,  37.6173],
+        ['Bankok, Thailand', 13.7563, 100.5018],
+        ['Dubai, UAE', 25.2048, 55.2708],
+        ['Singapore, Singapore', 1.3521, 103.8198],
+        ['Tokyo, Japan', ],
+        ['Mumbai, India', ],
+        ['Amman, Jordan', ],
+        ['Shanghai, China', ],
+        ['Johannesburg, South Africa', ],
+        ['Cairo, Egypt' , ],
+        ['Casablanca, Morocco' , ],
+        ['Accra, Ghana' , ],
+        ['Maputo, Mozambique' , ],
+        ['New York, USA' , ],
+        ['Toronto, Canada' , ],
+        ['Los Angeles, USA' , ],
+        ['Mecixo City, Mexico' , ],
+        ['Buenos Aires, Argentina' , ],
+        ['Rio de Janeiro, Brazil',],
+        ['Bogota, Colombia',],
+        ['Sydney, Australia',]        
+    ];
+    
+    
+/*
 function myMap() {
+  var myCenter = new google.maps.LatLng(31.7917, 10);
   var myCenter = {lat: 31.7917, ln: 10};
   var mapCanvas = document.getElementById("map");
   var mapOptions = {center: myCenter, zoom: 2};
@@ -187,7 +225,7 @@ function myMap() {
 
 var image = 'map.png';
 var marker = new google.maps.Marker({
-    position: {lat: 51.5074, lng: 0.1278},
+    position: new google.maps.LatLng(lat: 51.5074, lng: 0.1278),
     title:"London, England",
     icon: image
 });
@@ -212,6 +250,8 @@ marker3.setMap(map);
     
   infowindow.open(map,marker);
 }   
+
+*/
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4TLchJowitWbZSXNcYMMCHAK9OleKXWw&callback=myMap"async defer></script>
