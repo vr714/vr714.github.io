@@ -232,16 +232,15 @@ function initialize() {
             position: position,
             map: map,
             title: markers[i][0]
-    });
+        });
+        google.maps.event.addListener(marker, 'click', (function(marker, i) {
+            return function() {
+                infoWindow.setContent(marker.title);
+                infoWindow.open(map, marker);
+            }
+        })(marker, i));
     
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
-        return function() {
-            infoWindow.setContent(marker.title);
-            infoWindow.open(map, marker);
-        }
-    })(marker, i));
-    
-    map.fitBounds(bounds);
+        map.fitBounds(bounds);
     }
     
     var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
@@ -286,7 +285,8 @@ marker3.setMap(map);
 }   
 
 */
-</script>   
+</script>  
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4TLchJowitWbZSXNcYMMCHAK9OleKXWw&callback=myMap"async defer></script>
 </body>
 </html>
  
