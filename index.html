@@ -210,10 +210,23 @@ h4 {
 .map-container {
 	width: 50%;
 	padding-top: 40px;
-	padding-left: 20px;
-	padding-right: 10px;
 	padding-bottom: 40px;
 }
+	
+.map-side {
+	padding-left: 20px;
+	padding-right: 0;
+}
+	
+.form-side {
+	padding-right: 20px;
+}
+	
+.map-row:after {
+	content: "";
+	display: table;
+	clear: both; 
+} 
 	
 #overlay {
     position: fixed;
@@ -532,8 +545,18 @@ textarea.input2 + .focus-input2::after {
 	
 <div class="map-container">
 	<h4>Our Locations</h4>
-	<div id="map" style="height:450px"></div>
+	<div class="map-row">
+		<div class="map-side">
+			<div id="map" style="height:450px"></div>
+		</div>
+		<div class="form-side">
+		</div>
+	</div>
 </div>
+	
+<div class="about-us-container">
+    <div class="row">
+        <div class="column left" syle="text-align: right;">
 
 <script>   
 function on() {
