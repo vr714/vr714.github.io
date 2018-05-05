@@ -533,17 +533,26 @@ textarea.input2 + .focus-input2::after {
 		<div class="text-container">
 			<p># locations</p>
 			<p>endless possibilities</p>
-			<div class="explore-button">Explore</div>
+			<div id="overlay" onclick="off()">
+				<div class="map-container">
+    				<h4>Our Locations</h4>
+    				<div id="map" style="height:450px"></div>
+				</div>
+			</div>
+			<div onclick="on()" class="explore-button">Explore</div>
 		</div>
 	</div>
-</div>
-
-<div class="map-container">
-    <h4>Our Locations</h4>
-    <div id="map" style="height:450px"></div>
 </div> 
 
 <script>   
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}	
+
 jQuery(function($) {
     var script = document.createElement('script');
     script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyD4TLchJowitWbZSXNcYMMCHAK9OleKXWw&callback=initialize";
