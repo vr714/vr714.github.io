@@ -126,13 +126,14 @@ h4 {
 }
 
 .explore-container {
-	padding: 20px;
+	background-image: url("plane.gif");
+	padding: 35px;
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
-.explore-img {
-	-webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
+.opaque-box {
+	background: rgba(0, 0, 0, 0.5);
+	padding: 20px;
 }
 	
 .text-container {
@@ -161,7 +162,7 @@ h4 {
 	background-color: #212F3C;
 	color: white;
 }
-    
+
 .about-us-container {
     padding-left: 20px;
     padding-right: 20px;
@@ -503,9 +504,11 @@ textarea.input2 + .focus-input2::after {
 			<p>Experiences of fellow travellers</p>
 		</div>
 		<div class="column right">
-			<div class="text-container">
-				<p># locations</p>
-				<p>endless possibilities</p>
+			<div class="opaque-box">
+				<div class="text-container">
+					<p># locations</p>
+					<p>endless possibilities</p>
+				</div>
 			</div>
 		</div>
 	</div>
