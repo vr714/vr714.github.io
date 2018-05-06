@@ -23,29 +23,29 @@ body {
 } 
 
 * { 
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 .topnav {
-    overflow: hidden;
-    top: 0;
-    width: 100%;
-    z-index: 1;
+	overflow: hidden;
+	top: 0;
+	width: 100%;
+	z-index: 1;
 }
     
 .topnav a { 
-    float: right;
-    display: block;
-    color: #212F3C;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1.5vw;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+	float: right;
+	display: block;
+	color: #212F3C;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 1.5vw;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
 } 
 
 .topnav a:hover {
-    border-bottom: 1px solid #212F3C
+	border-bottom: 1px solid #212F3C
 } 
  
 .big-icon {
@@ -55,7 +55,7 @@ body {
 }
     
 .video-container {
-    position: relative; 
+	position: relative; 
 }
 
 video {
@@ -73,8 +73,8 @@ video {
 }
 
 .title-container {
-    border: 2px solid #212F3C;
-    width: 40%;
+	border: 2px solid #212F3C;
+	width: 40%;
 }
 
 p {
@@ -170,18 +170,18 @@ h4 {
 }
 	
 .explore-button {
-    background-color: none;
-    border: 2px solid white;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    -webkit-transition-duration: 0.3s; 
-    transition-duration: 0.3s;
-    cursor: pointer;
+	background-color: none;
+	border: 2px solid white;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	-webkit-transition-duration: 0.3s; 
+	transition-duration: 0.3s;
+	cursor: pointer;
 }
 	
 .explore-button:hover {
@@ -521,7 +521,8 @@ textarea.input2 + .focus-input2::after {
 <div class="explore-container">
 	<div class="explore-row">
 		<div class="explore-map">
-		
+			<h4>Our Locations</h4>
+			<div id="map" style="height:450px"></div>
 		</div>
 		<div class="explore-overlay">
 			<div class="opaque-box">
@@ -531,17 +532,6 @@ textarea.input2 + .focus-input2::after {
 					<div class="explore-button">Explore</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</div>
-	
-<div class="map-container">
-	<div class="map-row">
-		<div class="map-side">
-			<h4>Our Locations</h4>
-			<div id="map" style="height:450px"></div>
-		</div>
-		<div class="form-side">
 		</div>
 	</div>
 </div>
