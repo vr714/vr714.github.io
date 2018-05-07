@@ -272,6 +272,12 @@ body, input {
 	padding: 0.5rem 1rem;
 	color: #212F3C;
 }
+	
+.dates-box {
+	display: inline block;
+	width: 100%;
+	padding: 2px;
+}
 
 .about-us-container {
 	padding-left: 20px;
@@ -636,9 +642,14 @@ textarea.input2 + .focus-input2::after {
 						</select>
 					</div>
 					</div>
-					<p style="color: white; font-size: 18px; float: left;">To: </p>
-					<input type="date" min="2017-08-15" max="2018-08-26" step="7">
-					<br>
+					<div class="dates-box">
+						<p style="color: white; font-size: 18px; float: left;">From: </p>
+							<input type="date" min="2017-08-15" max="2018-08-26" step="7">
+							<br>
+						<p style="color: white; font-size: 18px; float: left;">To: </p>
+							<input type="date" min="2017-08-15" max="2018-08-26" step="7">
+							<br>
+					</div>
 					<div class="explore-button">Explore Prices</div>
 				</div>
 			</div>
