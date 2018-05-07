@@ -545,6 +545,30 @@ textarea.input2 + .focus-input2::after {
   }
 }
 	
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 18px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+	
 	
     
 </style>
@@ -653,11 +677,20 @@ textarea.input2 + .focus-input2::after {
 							<input type="date" min="2017-08-15" max="2018-08-26" step="7">
 							<br>
 					</div>
-					<div class="explore-button">Explore Prices</div>
+					<div class="explore-button">
+						<button onclick="on()">Explore Prices</button>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</div>
+
+<div id="overlay" onclick="off()">
+	<div id="text" style="font-size: 24px;">Pricing</div>
+	<div id="text">Round-Trip Flight: </div>
+	<div id="text">Hotel (per night): </div>
+	<div id="text" style="float: left;">Total for x days: </div>
 </div>
 
 <script>   
