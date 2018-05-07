@@ -259,6 +259,13 @@ h4 {
 .select-items div:hover, .same-as-selected {
 	background-color: rgba(0, 0, 0, 0.1);
 }
+	
+body, input {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 1.2rem;
+	display: block;
+	padding: 0.5rem 1rem;
+}
 
 .about-us-container {
 	padding-left: 20px;
@@ -621,6 +628,8 @@ textarea.input2 + .focus-input2::after {
 
 						</select>
 					</div>
+					<input type="date" min="2017-08-15" max="2018-08-26" step="7">
+					<br>
 					<div class="explore-button">Explore Prices</div>
 				</div>
 			</div>
@@ -759,7 +768,12 @@ function closeAllSelect(elmnt) {
 }
 /*if the user clicks anywhere outside the select box,
 then close all select boxes:*/
-document.addEventListener("click", closeAllSelect);</script>
+document.addEventListener("click", closeAllSelect);
+	
+let today = new Date().toISOString().substr(0, 10);
+document.querySelector("#today").value = today;
+
+document.querySelector("#today2").valueAsDate = new Date();
     
 </script>  
 </body>
