@@ -25,7 +25,13 @@ body {
 * { 
 	box-sizing: border-box;
 }
+	
+p { 
+	font-family: 'Roboto Condensed', sans-serif;
+	font-size: 18px;
+}
 
+/*---------------------------------------nav bar-----------------------------------------------*/
 .topnav {
 	position: fixed;
 	background: #212F3C;
@@ -56,6 +62,7 @@ body {
 	color: #212F3C;
 } 
     
+/*---------------------------------------video + title ovrlay-----------------------------------------------*/
 .video-container {
 	position: relative; 
 	width: 100%;
@@ -65,11 +72,6 @@ body {
 
 video {
 	width: 100%;
-	/*
-	display: flex;  
-	justify-content: center; 
-	align-items: center;
-	*/
 	object-fit: fill;
 }
 
@@ -86,11 +88,6 @@ video {
 	border: 2px solid #212F3C;
 	width: 40%;
 }
-
-p { 
-	font-family: 'Roboto Condensed', sans-serif;
-	font-size: 18px;
-}
     
 h1 {
 	color: #212F3C;
@@ -106,26 +103,8 @@ h2 {
 	text-align: center; 
 	padding-bottom: 10px;
 }
-	
-h3 {
-	color: #212F3C; 
-	font-size: 50px; 
-	padding-top: 0px;
-	overflow: hidden;
-}
-	
-h3:before {
-	background-color: #AEB6BF;
-	content: "";
- 	display: inline-block;
- 	height: 1px;
-	position: relative;
-	vertical-align: middle;
-	width: 50%;
-	right: 0.5em;
- 	margin-left: -50%;
-}
 
+/*---------------------------------------map + book flight row-----------------------------------------------*/
 h4 {
 	color: white; 
 	font-size: 3vw;
@@ -143,13 +122,13 @@ h4 {
 	margin: 20px;
 }
 	
-.map {
+.map {				/* left column */
 	width: 40%;
 	float: left;
 	display: inline-block;
 }	
 	
-.explore-overlay {
+.explore-overlay {		/* right column */
 	width: 40%;
 	display: inline-block;
 	float: right;
@@ -280,7 +259,27 @@ body, input {
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
-
+	
+/*---------------------------------------about us + contact row-----------------------------------------------*/
+h3 {
+	color: #212F3C; 
+	font-size: 50px; 
+	padding-top: 0px;
+	overflow: hidden;
+}
+	
+h3:before {
+	background-color: #AEB6BF;
+	content: "";
+ 	display: inline-block;
+ 	height: 1px;
+	position: relative;
+	vertical-align: middle;
+	width: 50%;
+	right: 0.5em;
+ 	margin-left: -50%;
+}
+	
 .about-us-container {
 	padding-left: 20px;
 	padding-right: 20px;
@@ -317,7 +316,7 @@ body, input {
 	clear: both; 
 } 
   	
-    
+/*contact*/    
 input {
 	outline: none;
 	border: none;
@@ -484,41 +483,44 @@ textarea.input2 + .focus-input2::after {
 }
 	
 .container-contact2-form-btn {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-top: 13px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 13px;
 }
+	
 .wrap-contact2-form-btn {
-  display: block;
-  position: relative;
-  z-index: 1;
-  border-radius: 2px;
-  width: auto;
-  overflow: hidden;
-  margin: 0 auto;
+	display: block;
+	position: relative;
+	z-index: 1;
+	border-radius: 2px;
+	width: auto;
+	overflow: hidden;
+	margin: 0 auto;
 }
+	
 .contact2-form-bgbtn {
-  position: absolute;
-  z-index: -1;
-  width: 300%;
-  height: 100%;
-  background: rgba(219,21,99,1);
-  background: -webkit-linear-gradient(-135deg, #5D6D7E, #283747, #F9E79F, #283747);
-  background: -o-linear-gradient(-135deg, #5D6D7E, #283747, #F9E79F, #283747);
-  background: -moz-linear-gradient(-135deg, #5D6D7E, #283747, #F9E79F, #283747);
-  background: linear-gradient(-135deg, #5D6D7E, #283747, #F9E79F, #283747);
-  top: 0;
-  left: -100%;
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
+	position: absolute;
+	z-index: -1;
+	width: 300%;
+	height: 100%;
+	background: rgba(219,21,99,1);
+	background: -webkit-linear-gradient(-135deg, #5D6D7E, #283747, #F9E79F, #283747);
+	background: -o-linear-gradient(-135deg, #5D6D7E, #283747, #F9E79F, #283747);
+	background: -moz-linear-gradient(-135deg, #5D6D7E, #283747, #F9E79F, #283747);
+	background: linear-gradient(-135deg, #5D6D7E, #283747, #F9E79F, #283747);
+	top: 0;
+	left: -100%;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	transition: all 0.4s;
 }
+	
 .contact2-form-btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -540,34 +542,12 @@ textarea.input2 + .focus-input2::after {
 }
 
 @media (max-width: 576px) {
-  .wrap-contact2 {
-    padding: 72px 15px 90px 15px;
-  }
-}
-	
-#overlay {
-    position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.8);
-    z-index: 400;
-    cursor: pointer;
-	text-align: center;
-	padding-top: 20%;
-}
+	.wrap-contact2 {
+		padding: 72px 15px 90px 15px;
+	}
+}		
 
-#text {
-    font-size: 18px;
-    color: white;
-}
 	
-	
-    
 </style>
 </head>
 <body>
@@ -580,55 +560,53 @@ textarea.input2 + .focus-input2::after {
 </div>
   
 <div class="video-container">    
-    <video autoplay muted loop id="site" width=100% height=100%>
-        <source src="vr714.github.io/final.mp4" type="video/mp4">  
-    </video> 
-    <div class="overlay-desc">
-        <div class="title-container">
-            <h1>LËVIZ</h1>
-            <h2>Life is Movement</h2>
-        </div> 
-    </div> 
+	<video autoplay muted loop id="site" width=100% height=100%>
+		<source src="vr714.github.io/final.mp4" type="video/mp4">  
+    	</video> 
+    	<div class="overlay-desc">
+        	<div class="title-container">
+            		<h1>LËVIZ</h1>
+            		<h2>Life is Movement</h2>
+        	</div> 
+    	</div> 
 </div>
 
 <div class="about-us-container"><a name="about"></a>
-    <div class="row">
+	<div class="row">
         <div class="column left" syle="text-align: right;">
 		<h3>About Us</h3>
 		<p style="color: #212F3C">Here at Lëviz, we are dedicated to help people travel for less. We know how important it is to go out and see the world so let us help you do just that! We have locations all around the world ranging from New York, USA to Sydney, Australia. From Moscow, Russia to Johannesburg, South Africa. Refusing to inflate prices, we believe that it is essential for companies to give up. In addition to our low prices, we pride ourselves in our high employee wages and benefits. Have a question? Shoot us a message!
 		</p>
-        </div>
-        <div class="column right">
-            <div class="bg-contact2">
+	</div>
+	<div class="column right">
+		<div class="bg-contact2">
         	<div class="container-contact2">
-            	<div class="wrap-contact2">
-                	<form class="contact2-form validate-form">
-			<div class="wrap-input2 validate-input" data-validate="Name is required">
-                        	<input class="input2" type="text" name="name">
-                        	<span class="focus-input2" data-placeholder="Name"></span>
-                    	</div>
-						<div class="wrap-input2 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                        	<input class="input2" type="text" name="email">
-                        	<span class="focus-input2" data-placeholder="Email"></span>
-                    	</div>
-						<div class="wrap-input2 validate-input" data-validate="Message is required">
-                        	<textarea class="input2" name="message"></textarea>
-                        	<span class="focus-input2" data-placeholder="Message"></span>
-                    	</div>
-						<div class="container-contact2-form-btn">
-                        	<div class="wrap-contact2-form-btn">
-                            	<div class="contact2-form-bgbtn"></div>
-                            		<button class="contact2-form-btn">
-                                		Send
-                            		</button>
-                        	</div>
-                    	</div>
-                	</form>
-            	</div>
-        	</div>
-   		</div>
-    </div>
-    </div>
+            		<div class="wrap-contact2">
+                		<form class="contact2-form validate-form">
+					<div class="wrap-input2 validate-input" data-validate="Name is required">
+                        			<input class="input2" type="text" name="name">
+                        				<span class="focus-input2" data-placeholder="Name"></span>
+                    			</div>
+					<div class="wrap-input2 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+                        			<input class="input2" type="text" name="email">
+                        				<span class="focus-input2" data-placeholder="Email"></span>
+                    			</div>
+					<div class="wrap-input2 validate-input" data-validate="Message is required">
+                        			<textarea class="input2" name="message"></textarea>
+                        				<span class="focus-input2" data-placeholder="Message"></span>
+                    			</div>
+					<div class="container-contact2-form-btn">
+                        			<div class="wrap-contact2-form-btn">
+                            				<div class="contact2-form-bgbtn"></div>
+                            					<button class="contact2-form-btn">Send</button>
+                        			</div>
+                    			</div>
+				</form>
+			</div>
+		</div>
+		</div>
+    	</div>
+    	</div>
 </div>
 	
 <div class="explore-container"><a name="locations"></a>
@@ -642,28 +620,28 @@ textarea.input2 + .focus-input2::after {
 				<div class="text-container">
 					<div class="locations-list">
 					<p style="color: white; font-size: 18px; float: left;">To: </p>
-					<div class="custom-select" style="width:200px;">
-  						<select>
-<option value="0">Select Location:</option>
-<option value="1">London, England</option>
-<option value="2">Paris, France</option>
-<option value="3">Istanbul, Turkey</option>
-<option value="4">Moscow, Russia</option>
-<option value="5">Bankok, Thailand</option>
-<option value="6">Dubai, UAE</option>
-<option value="7">Tokyo, Japan</option>
-<option value="8">Mumbai, India</option>
-<option value="9">Johannesburg, South Africa</option>
-<option value="10">Cairo, Egypt</option>
-<option value="11">Casablanca, Morocco</option>
-<option value="12">New York City, USA</option>
-<option value="13">Mexico City, Mexico</option>
-<option value="14">Rio de Janeiro, Brazil</option>
-<option value="15">Bogota, Colombia</option>
-<option value="16">Sydney, Australia</option>
+						<div class="custom-select" style="width:200px;">
+  							<select>
+								<option value="0">Select Location:</option>
+								<option value="1">London, England</option>
+								<option value="2">Paris, France</option>
+								<option value="3">Istanbul, Turkey</option>
+								<option value="4">Moscow, Russia</option>
+								<option value="5">Bankok, Thailand</option>
+								<option value="6">Dubai, UAE</option>
+								<option value="7">Tokyo, Japan</option>
+								<option value="8">Mumbai, India</option>
+								<option value="9">Johannesburg, South Africa</option>
+								<option value="10">Cairo, Egypt</option>
+								<option value="11">Casablanca, Morocco</option>
+								<option value="12">New York City, USA</option>
+								<option value="13">Mexico City, Mexico</option>
+								<option value="14">Rio de Janeiro, Brazil</option>
+								<option value="15">Bogota, Colombia</option>
+								<option value="16">Sydney, Australia</option>
 
-						</select>
-					</div>
+							</select>
+						</div>
 					</div>
 					<div class="dates-box">
 						<p style="color: white; font-size: 18px; float: left;">From: </p>
@@ -675,7 +653,6 @@ textarea.input2 + .focus-input2::after {
 							<input type="date" min="2018-05-01" max="2019-05-01" step="7" style="border: 2px solid #212F3C">
 						<br>
 					</div>
-					
 					<div class="explore-button">
 						<button onclick="on()">Explore Prices</button>
 					</div>
@@ -692,139 +669,142 @@ textarea.input2 + .focus-input2::after {
 	<div id="text">Total for x days: </div>
 </div>
 
+
 <script>   
+
+/* flight prices overlay */
 function on() {
-    document.getElementById("overlay").style.display = "block";
+	document.getElementById("overlay").style.display = "block";
 }
 
 function off() {
-    document.getElementById("overlay").style.display = "none";
+	document.getElementById("overlay").style.display = "none";
 }	
 
+/* ----------------------------------map functions--------------------------------------- */
 jQuery(function($) {
-    var script = document.createElement('script');
-    script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyD4TLchJowitWbZSXNcYMMCHAK9OleKXWw&callback=initialize";
-    document.body.appendChild(script);
+	var script = document.createElement('script');
+	//whoops I need to learn how to hide the key
+	script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyD4TLchJowitWbZSXNcYMMCHAK9OleKXWw&callback=initialize";
+	document.body.appendChild(script);
 });
     
 function initialize() {
-    var map;
-    var bounds = new google.maps.LatLngBounds();
-    var mapOptions = {mapTypeId: 'roadmap'};
-    map = new google.maps.Map(document.getElementById("map"), mapOptions);
-    var markers = [
-        ['London, England', 51.5074, -0.1278],
-        ['Paris, France', 48.8566, 2.3522],
-        ['Istanbul, Turkey', 41.0082, 28.9784],
-        ['Moscow, Russia', 55.7558, 37.6173],
-        ['Bankok, Thailand', 13.7563, 100.5018],
-        ['Dubai, UAE', 25.2048, 55.2708],
-        ['Tokyo, Japan', 35.6895, 139.6917],
-        ['Mumbai, India', 19.0760, 72.8777],
-        ['Johannesburg, South Africa', -26.2041, 28.0473],
-        ['Cairo, Egypt', 30.0444, 31.2357],
-        ['Casablanca, Morocco', 33.5731, -7.5898],
-        ['New York City, USA', 40.7128, -74.0060],
-        ['Mexico City, Mexico', 19.4326, -99.1332],
-        ['Rio de Janeiro, Brazil', -22.9068, -43.1729],
-        ['Bogota, Colombia', -4.7110, -74.0721],
-        ['Sydney, Australia', -33.8688, 151.2093]        
-    ];
+	var map;
+	var bounds = new google.maps.LatLngBounds();
+	var mapOptions = {mapTypeId: 'roadmap'};
+	map = new google.maps.Map(document.getElementById("map"), mapOptions);
+	var markers = [
+		['London, England', 51.5074, -0.1278],
+		['Paris, France', 48.8566, 2.3522],
+		['Istanbul, Turkey', 41.0082, 28.9784],
+		['Moscow, Russia', 55.7558, 37.6173],
+		['Bankok, Thailand', 13.7563, 100.5018],
+		['Dubai, UAE', 25.2048, 55.2708],
+		['Tokyo, Japan', 35.6895, 139.6917],
+		['Mumbai, India', 19.0760, 72.8777],
+		['Johannesburg, South Africa', -26.2041, 28.0473],
+		['Cairo, Egypt', 30.0444, 31.2357],
+		['Casablanca, Morocco', 33.5731, -7.5898],
+		['New York City, USA', 40.7128, -74.0060],
+		['Mexico City, Mexico', 19.4326, -99.1332],
+		['Rio de Janeiro, Brazil', -22.9068, -43.1729],
+		['Bogota, Colombia', -4.7110, -74.0721],
+		['Sydney, Australia', -33.8688, 151.2093]        
+	];
     
-    var infoWindow = new google.maps.InfoWindow(), marker, i;
+	var infoWindow = new google.maps.InfoWindow(), marker, i;
     
-    for(i = 0; i < markers.length; i++ ) {
-        var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
-        bounds.extend(position);
-        marker = new google.maps.Marker({
-            position: position,
-            map: map,
-            title: markers[i][0]
-        });
-        google.maps.event.addListener(marker, 'click', (function(marker, i) {
-            return function() {
-                infoWindow.setContent(marker.title);
-                infoWindow.open(map, marker);
-            }
-        })(marker, i));
-    
-        map.fitBounds(bounds);
-    }
+	for(i = 0; i < markers.length; i++ ) {
+		var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+		bounds.extend(position);
+		marker = new google.maps.Marker({
+			position: position,
+			map: map,
+			title: markers[i][0]
+		});
+		google.maps.event.addListener(marker, 'click', (function(marker, i) {
+			return function() {
+				infoWindow.setContent(marker.title);
+				infoWindow.open(map, marker);
+			}
+		})(marker, i));
+
+		map.fitBounds(bounds);
+	}
 }  
 
+/* ----------------------------------locations list scroll down--------------------------------------- */
 var x, i, j, selElmnt, a, b, c;
-/*look for any elements with the class "custom-select":*/
+/* look for any elements with the class custom-select: */
 x = document.getElementsByClassName("custom-select");
 for (i = 0; i < x.length; i++) {
-  selElmnt = x[i].getElementsByTagName("select")[0];
-  /*for each element, create a new DIV that will act as the selected item:*/
-  a = document.createElement("DIV");
-  a.setAttribute("class", "select-selected");
-  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-  x[i].appendChild(a);
-  /*for each element, create a new DIV that will contain the option list:*/
-  b = document.createElement("DIV");
-  b.setAttribute("class", "select-items select-hide");
-  for (j = 0; j < selElmnt.length; j++) {
-    /*for each option in the original select element,
-    create a new DIV that will act as an option item:*/
-    c = document.createElement("DIV");
-    c.innerHTML = selElmnt.options[j].innerHTML;
-    c.addEventListener("click", function(e) {
-        /*when an item is clicked, update the original select box,
-        and the selected item:*/
-        var y, i, k, s, h;
-        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        h = this.parentNode.previousSibling;
-        for (i = 0; i < s.length; i++) {
-          if (s.options[i].innerHTML == this.innerHTML) {
-            s.selectedIndex = i;
-            h.innerHTML = this.innerHTML;
-            y = this.parentNode.getElementsByClassName("same-as-selected");
-            for (k = 0; k < y.length; k++) {
-              y[k].removeAttribute("class");
-            }
-            this.setAttribute("class", "same-as-selected");
-            break;
-          }
-        }
-        h.click();
-    });
-    b.appendChild(c);
-  }
-  x[i].appendChild(b);
-  a.addEventListener("click", function(e) {
-      /*when the select box is clicked, close any other select boxes,
-      and open/close the current select box:*/
-      e.stopPropagation();
-      closeAllSelect(this);
-      this.nextSibling.classList.toggle("select-hide");
-      this.classList.toggle("select-arrow-active");
-    });
+	selElmnt = x[i].getElementsByTagName("select")[0];
+	/* for each element, create a new DIV that will act as the selected item: */
+	a = document.createElement("DIV");
+	a.setAttribute("class", "select-selected");
+	a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+	x[i].appendChild(a);
+	/* for each element, create a new DIV that will contain the option list: */
+	b = document.createElement("DIV");
+	b.setAttribute("class", "select-items select-hide");
+	for (j = 0; j < selElmnt.length; j++) {
+		/* for each option in the original select element, create a new DIV that will act as an option item: */
+		c = document.createElement("DIV");
+		c.innerHTML = selElmnt.options[j].innerHTML;
+		c.addEventListener("click", function(e) {
+        		/* when an item is clicked, update the original select box, and the selected item: */
+        		var y, i, k, s, h;
+        		s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        		h = this.parentNode.previousSibling;
+        		for (i = 0; i < s.length; i++) {
+				if (s.options[i].innerHTML == this.innerHTML) {
+					s.selectedIndex = i;
+		    			h.innerHTML = this.innerHTML;
+		    			y = this.parentNode.getElementsByClassName("same-as-selected");
+		    			for (k = 0; k < y.length; k++) {
+		      				y[k].removeAttribute("class");
+		    			}
+		    			this.setAttribute("class", "same-as-selected");
+		    			break;
+				}
+			}
+			h.click();
+		});
+		b.appendChild(c);
+	}
+	x[i].appendChild(b);
+	a.addEventListener("click", function(e) {
+		/* when the select box is clicked, close any other select boxes, and open/close the current select box: */
+		e.stopPropagation();
+		closeAllSelect(this);
+		this.nextSibling.classList.toggle("select-hide");
+		this.classList.toggle("select-arrow-active");
+	});
 }
+	
 function closeAllSelect(elmnt) {
-  /*a function that will close all select boxes in the document,
-  except the current select box:*/
-  var x, y, i, arrNo = [];
-  x = document.getElementsByClassName("select-items");
-  y = document.getElementsByClassName("select-selected");
-  for (i = 0; i < y.length; i++) {
-    if (elmnt == y[i]) {
-      arrNo.push(i)
-    } else {
-      y[i].classList.remove("select-arrow-active");
-    }
-  }
-  for (i = 0; i < x.length; i++) {
-    if (arrNo.indexOf(i)) {
-      x[i].classList.add("select-hide");
-    }
-  }
+	/* a function that will close all select boxes in the document, except the current select box: */
+	var x, y, i, arrNo = [];
+	x = document.getElementsByClassName("select-items");
+	y = document.getElementsByClassName("select-selected");
+	for (i = 0; i < y.length; i++) {
+		if (elmnt == y[i]) {
+			arrNo.push(i)
+		} else {
+			y[i].classList.remove("select-arrow-active");
+		}
+	}
+	for (i = 0; i < x.length; i++) {
+		if (arrNo.indexOf(i)) {
+			x[i].classList.add("select-hide");
+		}
+	}
 }
-/*if the user clicks anywhere outside the select box,
-then close all select boxes:*/
+
 document.addEventListener("click", closeAllSelect);
 	
+/* ------------------------------------------date functions--------------------------------------------- */
 let today = new Date().toISOString().substr(0, 10);
 document.querySelector("#today").value = today;
 
